@@ -22,8 +22,8 @@ import (
 )
 
 var (
-	serviceLabelPrefix        = "service."
-	stackNamespaceLabelPrefix = "stack."
+	serviceLabelPrefix        = "services."
+	stackNamespaceLabelPrefix = "stacks."
 	dockerStackNamespaceLabel = "com.docker.stack.namespace"
 	defaultRefreshInterval    = 15 * time.Second
 )
