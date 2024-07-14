@@ -123,8 +123,12 @@ func main() {
 							discoveredNodes[task.NodeID][fmt.Sprintf("%s%s", stackNamespaceLabelPrefix, service.Spec.Labels[dockerStackNamespaceLabel])] = "true"
 						}
 
+						// Replace hyphens with underscores in the service name
+						serviceName := service.Spec.Name
+						serviceName = strings.Replace(serviceName, "-", "_", -1)
+
 						// Add the service name to the discoveredNodes map
-						discoveredNodes[task.NodeID][fmt.Sprintf("%s%s", serviceLabelPrefix, service.Spec.Name)] = "true"
+						discoveredNodes[task.NodeID][fmt.Sprintf("%s%s", serviceLabelPrefix, serviceName)] = "true"
 					}
 				}
 
