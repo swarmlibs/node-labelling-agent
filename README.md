@@ -31,7 +31,7 @@ services:
     deploy:
       placement:
         constraints:
-          - node.labels.service.myapp_ingress == true
+          - node.labels.services.myapp_ingress == true
 networks:
   ingress:
 ```
