@@ -36,6 +36,44 @@ networks:
   ingress:
 ```
 
+**Promstack example:**
+
+```sh
+$ docker node inspect self
+```
+
+```json
+[
+    {
+        "ID": "ro06pl57tb2ghdxtl7oqvvn4x",
+        # ...
+        "Spec": {
+            "Labels": {
+                "services.promstack_blackbox_exporter": "true",
+                "services.promstack_cadvisor": "true",
+                "services.promstack_grafana": "true",
+                "services.promstack_grafana_dashboard_provider": "true",
+                "services.promstack_grafana_provisioning_config_reloader": "true",
+                "services.promstack_grafana_provisioning_dashboard_provider": "true",
+                "services.promstack_grafana_provisioning_datasource_provider": "true",
+                "services.promstack_node_exporter": "true",
+                "services.promstack_prometheus": "true",
+                "services.promstack_prometheus_config_provider": "true",
+                "services.promstack_prometheus_config_reloader": "true",
+                "services.promstack_prometheus_server": "true",
+                "services.promstack_pushgateway": "true",
+                "services.swarmlibs_node_labelling_agent": "true",
+                "stacks.promstack": "true",
+                "stacks.swarmlibs": "true",
+            },
+            "Role": "manager",
+            "Availability": "active"
+        },
+    # ...
+    }
+]
+```
+
 ## Usage
 
 ```sh
