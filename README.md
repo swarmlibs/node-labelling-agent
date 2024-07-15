@@ -107,6 +107,8 @@ This diagram illustrates how placement preferences work:
 
 ![placement_prefs](https://docs.docker.com/engine/swarm/images/placement_prefs.png)
 
+See [Control service placement](https://docs.docker.com/engine/swarm/services/#control-service-placement) for more information.
+
 ## License
 
 Licensed under [MIT](./LICENSE).
